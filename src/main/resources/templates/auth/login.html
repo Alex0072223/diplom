@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleRegister.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <title>Страница авторизации</title>
+</head>
+<body>
+    <div class="containerRegister">
+
+
+        <form  name="f" method="post" action="/process_login">
+
+            <input type="hidden" th:name="${_csrf.getParameterName()}" th:value="${_csrf.token}"/>
+            <div>
+                <img class="logotype" src="/img/LOGO.png">
+                <span class="loginUser">
+                    Вход в личный кабинет
+                </span>
+            </div>
+
+
+            <div class="listOfElements">
+                <div class="form-control">
+                    <label for="username">email or login</label>
+                    <input class="inputLoginUser" name="username" type="text" id="username" placeholder="Введите email or login" />
+                    <small>Сообщение об ошибке</small>
+
+
+
+
+
+
+                </div>
+                <div class="form-control">
+                    <label for="password">Пароль</label>
+                    <input class="inputLoginUser" type="password" name="password" id="password" placeholder="Введите Ваш пароль" />
+                    <small>Сообщение об ошибке</small>
+                </div>
+
+
+                <!--Входа-->
+                <button class="buttonLoginUser" type="submit" value="Login">Войти</button>
+
+
+
+
+
+
+
+
+
+
+                <div class="additionalWidget">
+                    <div>
+                        <a href="/auth/registration" style="text-decoration: none">
+                            <span class="textLoginUser1">
+                                Регистрация
+                            </span>
+                        </a>
+
+                    </div>
+                    <hr class="hrLoginUser">
+                    <div>
+                        <span class="textLoginUser2" href="alex@mail.ru">
+                            Служба поддержки
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div th:if="${param.error}" style="color: red">
+                Неправильный логин или пароль
+            </div>
+            <!-- <img class="imgIconsOnTheAppStore" src="./Img/appStore.jpg"> -->
+            <!-- <img class="imgIconsOnTheAppStore" src="./Img/googlePlay.jpg"> -->
+        </form>
+
+
+
+
+    </div>  
+    <!--<script src="/js/appRegister.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleRegister.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <title>Регистрация</title>
+</head>
+
+
+<body>
+    <div class="containerRegister">
+        <form name='registration' id="form" onSubmit="return formValidation();" th:method="POST" th:action="@{/auth/registration}" th:object="${person}">
+            <div>
+                <img class="logotype" src="/img/LOGO.png">
+            </div>
+            <span class="loginUser">
+                Регистрация
+            </span>
+            <div class="listOfElements">
+                <div class="form-control">
+
+
+                    <label for="fullName">Имя</label>
+                    <input  th:field="*{fullName}" id="fullName" class="inputLoginUser" type="text"  placeholder="Введите ваше имя" />
+                    <small>Сообщение об ошибке</small>
+
+
+
+
+                </div>
+                <div class="form-control">
+                    <label for="login">Почта</label>
+                    <input th:field="*{login}" id="login" class="inputLoginUser" type="text"  placeholder="Введите email" />
+                    <small>Сообщение об ошибке</small>
+                    <div style="color:red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Login Error</div>
+                </div>
+
+
+                <div class="form-control">
+                    <label for="password">Пароль</label>
+                    <input th:field="*{password}" class="inputLoginUser" type="password" id="password" placeholder="Введите  пароль" />
+                    <small>Сообщение об ошибке</small>
+                </div>
+                <div class="form-control">
+                    <label for="password2">Подтверждение пароля</label>
+                    <input class="inputLoginUser" type="password" id="password2" placeholder="Введите пароль снова" />
+                    <small>Сообщение об ошибке</small>
+                </div>
+
+                <!--Кнопка зарегистрироваться-->
+                <button class="buttonLoginUser" type="submit" value="Sing up">Зарегистрироваться</button>
+
+                
+                
+                <div class="additionalWidget">
+                    <div>
+                        <a href="/login" style="text-decoration: none">
+                            <span class="textLoginUser1">
+                                Авторизоваться
+                            </span>
+                        </a>
+
+                    </div>
+                    <hr class="hrLoginUser" >
+                    <div>
+                        <span class="textLoginUser2" href="" >
+                            Служба поддержки
+                        </span>
+                    </div>
+                </div> 
+            </div>
+            <!-- <img class="imgIconsOnTheAppStore" src="./Img/appStore.jpg"> -->
+            <!-- <img class="imgIconsOnTheAppStore" src="./Img/googlePlay.jpg"> -->
+        </form>
+    </div> 
+    <!--<script src="/js/appRegister.js"></script>-->
+</body>
+</html>

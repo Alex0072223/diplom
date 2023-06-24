@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.element::-webkit-scrollbar {
+    width: 0;
+} 
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+body {
+    position: relative;
+    background: linear-gradient(90deg, #000000, #242323);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Montserrat';
+}
+
+
+.containerRegister{
+    width: 500px;
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.logotype{
+    justify-content: center;
+    width: 60px;
+    height: 80px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.loginUser{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 28px;
+    line-height: 48px;
+    color: #ffffff;
+}
+
+.listOfElements {
+    margin-top: 40px;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.inputLoginUser {
+    box-sizing: border-box;
+    margin-top: 24px;
+    float: center;
+
+    width: 380px;
+    height: 52px;
+    border: 1px solid #ff8800;
+    border-radius: 4px;
+
+    padding-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.buttonLoginUser {
+    width: 380px;
+    height: 56px;
+    margin-top: 44px;
+
+    background: #000000;
+    border-radius: 4px;
+    border-color: #ff8800;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.additionalWidget {
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.textLoginUser1{
+    width: 115px;
+    height: 24px;
+    margin-top: 120px;
+
+    font-family: 'Montserrat';
+    font-style: initial;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.hrLoginUser{
+    box-sizing: border-box;
+    height: 1px;
+
+    border: 1px solid #ff8800;
+    border-radius: 3px;
+}
+
+.textLoginUser2{
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #ffffff;
+    display: inline;
+    border-bottom: 1px solid #ff8800;
+}
+
+.imgIconsOnTheAppStore{
+    width: 98px;
+    height: 32px;
+    opacity: 0.8;
+}
+
+input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:valid {
+    border: 2px solid #ff8800;
+  }
+
+
+
+:root {
+  --success-color: #ff8800;
+  --error-color: #ee1f09;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.form-control {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-top: 10px;
+  box-sizing: border-box;
+  float: center;
+}
+
+.form-control input {
+  border: 2px solid #c9c9c9;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
