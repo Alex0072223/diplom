@@ -12,6 +12,8 @@ import java.util.Date;
 @Entity
 @Table(name = "Book")
 public class Book {
+    //TODO: ROAD TO REST
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

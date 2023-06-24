@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class PersonDetails implements UserDetails {
-
+    //TODO: ROAD TO REST
     private final Person person;
 
     public PersonDetails(Person person) {

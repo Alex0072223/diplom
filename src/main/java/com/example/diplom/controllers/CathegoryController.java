@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/category")
 public class CathegoryController {
 
-
+    //TODO: ROAD TO REST
     @GetMapping()
     public String homePage(){
         return "cathegory/theCategoryPage";

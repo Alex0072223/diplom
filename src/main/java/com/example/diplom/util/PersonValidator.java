@@ -12,6 +12,7 @@ import org.springframework.validation.Validator;
 
 @Component
 public class PersonValidator implements Validator {
+    //TODO: ROAD TO REST
 
     private final PersonDetailsService personDetailsService;
 

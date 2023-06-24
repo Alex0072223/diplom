@@ -25,7 +25,7 @@ public class AuthController {
         this.registrationService = registrationService;
         this.personValidator = personValidator;
     }
-
+    //TODO: ROAD TO REST
     @GetMapping("/home")
     public String homePage(){
         return "auth/theHomePage";
